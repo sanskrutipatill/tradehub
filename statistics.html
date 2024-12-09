@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global and Local Statistics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">  
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* General Body Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f9f9f9;
+            margin: 0;
+            line-height: 1.8;
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        header {
+            background: #6ec1e4;
+            padding: 2rem;
+            text-align: center;
+            color: white;
+            animation: slideIn 1s ease-out;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: 600;
+            opacity: 0;
+            animation: fadeInHeader 1.5s forwards;
+        }
+
+        /* Section Styles */
+        section {
+            max-width: 1000px;
+            margin: 3rem auto;
+            padding: 2rem;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in forwards;
+        }
+
+        section h2 {
+            color: #6ec1e4;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 2s ease-in forwards;
+            animation-delay: 1s;
+        }
+
+        section p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            opacity: 0;
+            animation: fadeIn 2s ease-in forwards;
+            animation-delay: 1.2s;
+        }
+
+        /* Charts */
+        canvas {
+            display: block;
+            margin: 2rem auto;
+            max-width: 90%;
+            opacity: 0;
+            animation: fadeInChart 2s ease-in forwards;
+            animation-delay: 1.5s;
+        }
+
+        /* Button Styles */
+        .back-home-btn {
+            display: inline-block;
+            background-color: #6ec1e4;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin-top: 2rem;
+            text-align: center;
+            width: 100%;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .back-home-btn:hover {
+            background-color: #f6d365;
+            transform: scale(1.1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: #333;
+            color: white;
+            font-size: 1rem;
+        }
+
+        /* Keyframe Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInHeader {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInChart {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Global and Local Statistics</h1>
+        <p>Understanding the Impact of Financial Literacy</p>
+    </header>
+
+    <section>
+        <h2>Statistics on Financial Literacy and Its Impact</h2>
+        <p>Explore the latest data on financial literacy around the globe and in India. These statistics demonstrate the importance of financial education in improving individual financial well-being and reducing negative outcomes such as financial stress and mental health issues like suicides.</p>
+
+        <canvas id="financialStressChart"></canvas>
+        <canvas id="suicideRatesChart"></canvas>
+
+        <p>Financial stress affects millions of people globally, with a significant portion in India. This stress has detrimental effects, including the rise in suicide rates in regions where financial literacy is low. By focusing on education, we can help mitigate these challenges.</p>
+
+        <p>It is essential to highlight the socioeconomic disparities, as the impact of financial stress is disproportionately higher in underprivileged communities. Hence, promoting financial literacy is critical to improving not only financial stability but also mental health and community well-being.</p>
+
+        <a href="index.html" class="back-home-btn">Back to Home</a>
+    </section>
+
+    <footer>
+        &copy; 2024 TradeHub | All Rights Reserved
+    </footer>
+
+    <script>
+        // Financial Stress Chart with Animation
+        const financialStressCtx = document.getElementById('financialStressChart').getContext('2d');
+        new Chart(financialStressCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Global', 'India'],
+                datasets: [{
+                    label: 'Percentage of People Experiencing Financial Stress',
+                    data: [44, 52],
+                    backgroundColor: ['#6ec1e4', '#f6d365'],
+                    borderRadius: 8,
+                    hoverBackgroundColor: ['#5ab1cc', '#f6b400']
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { display: true },
+                    title: { display: true, text: 'Financial Stress (Global vs. India)' }
+                },
+                scales: {
+                    y: { 
+                        beginAtZero: true 
+                    }
+                },
+                animation: {
+                    duration: 2000,
+                    easing: 'easeInOutQuart',
+                }
+            }
+        });
+
+        // Suicide Rates Chart with Animation
+        const suicideRatesCtx = document.getElementById('suicideRatesChart').getContext('2d');
+        new Chart(suicideRatesCtx, {
+            type: 'pie',
+            data: {
+                labels: ['India', 'Rest of World'],
+                datasets: [{
+                    label: 'Suicide Rates Due to Financial Stress',
+                    data: [14.5, 10.4],
+                    backgroundColor: ['#f6d365', '#6ec1e4'],
+                    hoverOffset: 10,
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { display: true },
+                    title: { display: true, text: 'Suicide Rates Due to Financial Stress' }
+                },
+                animation: {
+                    duration: 1500,
+                    easing: 'easeOutBounce'
+                }
+            }
+        });
+    </script>
+</body>
+</html>
