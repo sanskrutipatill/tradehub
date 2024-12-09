@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TradeHub - Objectives</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+            animation: fadeIn 1s ease-in-out;
+        }
+        h2, h3 {
+            color: #6ec1e4;
+        }
+        /* Header Styles */
+        header {
+            background: linear-gradient(120deg, #6ec1e4, #f6d365);
+            padding: 3rem;
+            text-align: center;
+            color: white;
+            animation: slideDown 1s ease-out;
+        }
+        header h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.2rem;
+            margin: 1rem 0;
+        }
+        /* Navigation Styles */
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #fff;
+            padding: 1rem 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-size: 1.1rem;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 2rem;
+            font-weight: bold;
+            padding: 0.5rem;
+            transition: color 0.3s ease-in-out;
+        }
+        nav a:hover {
+            color: #6ec1e4;
+            border-bottom: 2px solid #6ec1e4;
+        }
+        /* Main Content Section */
+        section {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 3rem;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            animation: slideUp 1s ease-out;
+        }
+        section p {
+            font-size: 1.4rem;
+            color: #555;
+            margin-bottom: 2rem;
+        }
+        .objectives-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .objectives-list li {
+            font-size: 1.3rem;
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+            position: relative;
+            opacity: 0;
+            animation: fadeInUp 1s forwards;
+        }
+        .objectives-list li:before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 1.5rem;
+            color: #6ec1e4;
+        }
+        .objectives-list li:nth-child(odd) {
+            animation-delay: 0.3s;
+        }
+        .objectives-list li:nth-child(even) {
+            animation-delay: 0.6s;
+        }
+        /* Back to Home Button */
+        .back-home {
+            display: inline-block;
+            margin-top: 3rem;
+            padding: 1rem 2rem;
+            background-color: #6ec1e4;
+            color: white;
+            font-size: 1.2rem;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+            animation: fadeInUp 1.2s forwards;
+        }
+        .back-home:hover {
+            background-color: #5ab1cc;
+        }
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: #333;
+            color: white;
+            font-size: 1rem;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Keyframe Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>TradeHub</h1>
+        <p>Empowering Financial Literacy for a Better Future</p>
+    </header>
+    
+    <nav>
+        <a href="necessity.html">Necessity</a>
+        <a href="empowerment.html">Empowerment</a>
+        <a href="applications.html">Applications</a>
+        <a href="objectives.html">Objectives</a>
+        <a href="statistics.html">Statistics</a>
+    </nav>
+
+    <section>
+        <h2>Our Objectives</h2>
+        <p>At TradeHub, our mission is to bridge the financial literacy gap and empower individuals with the knowledge they need to make sound financial decisions. Here are the key objectives that drive our platform:</p>
+        
+        <ul class="objectives-list">
+            <li><strong>Promote Financial Education:</strong> Equip individuals with the tools and knowledge needed for smart money management.</li>
+            <li><strong>Raise Awareness:</strong> Highlight the significance of financial literacy in personal and community growth.</li>
+            <li><strong>Encourage Responsible Financial Habits:</strong> Support users in adopting budgeting, saving, and investing as part of their everyday lives.</li>
+            <li><strong>Bridge the Knowledge Gap:</strong> Address disparities in financial education across different socioeconomic groups and regions.</li>
+            <li><strong>Improve Economic Stability:</strong> Foster better decision-making to enhance the financial well-being of individuals and communities.</li>
+            <li><strong>Support Sustainable Investment Planning:</strong> Provide resources to help users plan for long-term financial goals and investments.</li>
+            <li><strong>Enhance Financial Inclusion:</strong> Promote access to financial resources for underserved and vulnerable populations.</li>
+            <li><strong>Build Financial Confidence:</strong> Help individuals make informed financial decisions to improve their quality of life and mental well-being.</li>
+        </ul>
+        
+        <a href="index.html" class="back-home">Back to Home</a>
+    </section>
+
+    <footer>
+        &copy; 2024 TradeHub | All Rights Reserved
+    </footer>
+</body>
+</html>
