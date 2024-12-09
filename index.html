@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TradeHub - Empowering Financial Literacy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #f3f4f9;
+            color: #444;
+            overflow-x: hidden;
+        }
+        h2, h3 {
+            color: #4a90e2;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s forwards;
+        }
+        /* Header Styles */
+        header {
+            background: linear-gradient(120deg, #81c3d7, #f1b6a8);
+            padding: 3rem;
+            text-align: center;
+            color: white;
+            border-bottom: 6px solid #e7e7e7;
+        }
+        header h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            margin: 0;
+            animation: fadeInDown 1s forwards;
+        }
+        header p {
+            font-size: 1.2rem;
+            margin: 1rem 0;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s 0.2s forwards;
+        }
+        /* Navigation Styles */
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #ffffff;
+            padding: 1rem 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-size: 1.1rem;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s 0.4s forwards;
+        }
+        nav a {
+            color: #4a90e2;
+            text-decoration: none;
+            margin: 0 2rem;
+            font-weight: bold;
+            padding: 0.5rem;
+            transition: color 0.3s ease-in-out;
+        }
+        nav a:hover {
+            color: #f1b6a8;
+            border-bottom: 2px solid #f1b6a8;
+            transform: scale(1.1);
+            transition: transform 0.2s ease-in-out;
+        }
+        /* Main Content Section */
+        section {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 3rem;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            border: 1px solid #e0e0e0;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s 0.6s forwards;
+        }
+        section p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 2rem;
+        }
+        /* Call-to-Action Button */
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: #4a90e2;
+            color: white;
+            font-size: 1.2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+        .cta-button:hover {
+            background-color: #2e74a3;
+            transform: scale(1.1);
+        }
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: #4a90e2;
+            color: white;
+            font-size: 1rem;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s 0.8s forwards;
+        }
+        /* Stats Section Styles */
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 3rem;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s 1s forwards;
+        }
+        .stats div {
+            background: #e7eff6;
+            padding: 2rem;
+            border-radius: 8px;
+            width: 30%;
+            text-align: center;
+        }
+        .stats div h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #f1b6a8;
+        }
+        .stats div p {
+            font-size: 1.1rem;
+            color: #777;
+        }
+        /* Chart Section Styles */
+        .chart-container {
+            margin-top: 3rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Keyframe Animations */
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>TradeHub</h1>
+        <p>Empowering Financial Literacy for a Better Future</p>
+    </header>
+    
+    <nav>
+        <a href="necessity.html">Necessity</a>
+        <a href="empowerment.html">Empowerment</a>
+        <a href="applications.html">Applications</a>
+        <a href="objectives.html">Objectives</a>
+        <a href="statistics.html">Statistics</a>
+    </nav>
+
+    <section>
+        <h2>Welcome to TradeHub</h2>
+        <p>Financial literacy is the cornerstone of economic success for individuals, communities, and entire nations. TradeHub is dedicated to promoting financial education through accessible tools, resources, and insights. By understanding money management, investing, and budgeting, individuals can make informed decisions that impact their lives and contribute to global economic stability.</p>
+        <a href="empowerment.html" class="cta-button">Start Your Financial Journey</a>
+    </section>
+
+    <section class="stats">
+        <div>
+            <h3>44%</h3>
+            <p>Global Population Experiencing Financial Stress</p>
+        </div>
+        <div>
+            <h3>52%</h3>
+            <p>Indian Population Facing Financial Literacy Gaps</p>
+        </div>
+        <div>
+            <h3>1.4 Million</h3>
+            <p>Annual Suicides Linked to Financial Stress</p>
+        </div>
+    </section>
+
+    <section class="chart-container">
+        <h2>Global Financial Stress and Suicide Rates</h2>
+        <canvas id="stressChart"></canvas>
+    </section>
+
+    <footer>
+        &copy; 2024 TradeHub | All Rights Reserved
+    </footer>
+
+    <script>
+        // Chart.js Data Visualization
+        const ctx = document.getElementById('stressChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Global', 'India', 'Rest of World'],
+                datasets: [{
+                    label: 'Financial Stress Impact',
+                    data: [44, 52, 38],
+                    backgroundColor: ['#81c3d7', '#f1b6a8', '#ffe085'],
+                    borderRadius: 8
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Global and Local Financial Stress Data'
+                    },
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
